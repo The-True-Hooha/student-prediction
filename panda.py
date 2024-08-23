@@ -20,4 +20,4 @@ print("The BD has ", data.user_id.nunique(), " users ")
 print("The BD has ", data.movie_id.nunique(), " items ")
 print(data.head())
 
-# print(pd. __version__)
+print(pd. __version__)
