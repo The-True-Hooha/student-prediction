@@ -248,3 +248,79 @@ print(arr[mask])
 print(arr[(arr > 3) & (arr < 8)])
 # Output: [4 5 6 7]
 ```
+
+## Loops
+
+using for loops for 2D arrays
+
+```py
+
+# Create a 2D array
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# Iterate over rows
+for row in arr:
+    print(row)
+
+# Iterate over columns
+for col in arr.T:
+    print(col)
+
+# Iterate over elements
+for row in arr:
+    for element in row:
+        print(element, end=" ")
+    print()
+
+# loop by individual elements
+for i in range(arr.shape[0]):
+    for j in range(arr.shape[1]):
+        print(arr[i, j])
+
+
+
+# while loops for a 2D array
+
+
+d = np.array([[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]])
+
+# Get the dimensions of the array
+rows, cols = d.shape
+
+# Initialize indices
+i = 0
+j = 0
+
+# Use a while loop to iterate through the array
+while i < rows:
+    while j < cols:
+        print(f"Element at ({i}, {j}): {arr_2d[i, j]}")
+        j += 1
+    # Reset column index and move to next row
+    j = 0
+    i += 1
+
+# Find the first element greater than 5
+arr_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+found = False
+i, j = 0, 0
+
+while i < arr_2d.shape[0] and not found:
+    j = 0
+    while j < arr_2d.shape[1] and not found:
+        if arr_2d[i, j] > 5:
+            found = True
+        else:
+            j += 1
+    if not found:
+        i += 1
+
+if found:
+    print(f"First element > 5 is at ({i}, {j}): {arr_2d[i, j]}")
+else:
+    print("No element > 5 found")
+
+
+```
